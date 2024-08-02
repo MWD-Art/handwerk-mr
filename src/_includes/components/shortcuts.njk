@@ -1,0 +1,14 @@
+<div class="grid" style="position: relative; z-index: 2; margin-top: -2rem;">
+  <section class="bg-primary bleed grid pk-3 box-shadow" style="container: cards / inline-size;">
+    <div class="cards content">
+      {% for shortcut in shortcuts %}
+      <a href="{{ shortcut.url }}" class="card">
+        <div class="card-content">
+          <img src="{{ shortcut.icon }}" alt="Ausbildung">
+          <h6 class="mb-0">{{ shortcut.title }}</h6>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+</div>

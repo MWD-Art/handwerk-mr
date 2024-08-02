@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Ausbildung",
+    "url": "/ausbildung/",
+    "icon": "/assets/img/ausbildung.webp"
+  },
+  {
+    "title": "Meisterschule",
+    "url": "/meisterschule/",
+    "icon": "/assets/img/student.webp"
+  },
+  {
+    "title": "Ausbildungplatz",
+    "url": "/ausbildungsplatz/",
+    "icon": "/assets/img/suche.webp"
+  },
+  {
+    "title": "Innungen",
+    "url": "/innungen/",
+    "icon": "/assets/img/guild.webp"
+  },
+  {
+    "title": "Betriebe",
+    "url": "/betriebe/",
+    "icon": "/assets/img/betriebe.webp"
+  },
+  {
+    "title": "Termine",
+    "url": "/termine/",
+    "icon": "/assets/img/termine.webp"
+  }
+]

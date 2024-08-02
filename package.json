@@ -15,7 +15,11 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.2.0"
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11tyrocks/eleventy-plugin-sass-lightningcss": "^1.2.0",
+    "esbuild": "^0.23.0",
+    "gsap": "^3.12.5",
+    "lenis": "^1.1.9"
   },
   "browserslist": [
     "> 0.2%",

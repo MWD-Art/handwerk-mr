@@ -1,0 +1,29 @@
+@use '../foundation/' as *;
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+
+  a {
+    font-weight: bold;
+    color: var(--primary);
+    transition: color 300ms ease-out;
+
+    &:hover,
+    &:focus {
+      color: var(--blue);
+    }
+
+    &[aria-current='page'] {
+      color: var(--secondary);
+    }
+  }
+}
+
+ @container header (width < 1024px) {
+   nav {
+    display: none;
+   }
+ }

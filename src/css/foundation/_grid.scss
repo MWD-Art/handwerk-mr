@@ -1,0 +1,89 @@
+.grid {
+  display: grid;
+    width: 100%;
+    grid-template-columns:
+      [full-start left-start bleedleft-start] minmax(1rem, 1fr) [bleedright-start bleed-start] minmax(0.5rem, 3rem) [content-start contentleft-start] minmax(0, 40rem) [contentleft-end left-end right-start contentright-start] minmax(0, 40rem) [contentright-end content-end] minmax(0.5rem, 3rem) [bleed-end bleedleft-end] minmax(1rem, 1fr) [bleedright-end right-end full-end];
+
+    .full {
+      grid-column: full;
+      position: relative;
+    }
+
+    .bleed {
+      grid-column: bleed;
+      position: relative;
+    }
+
+    .content {
+      grid-column: content;
+      position: relative;
+
+      @media screen and (max-width: 576px) {
+        grid-column: bleed;
+      }
+    }
+
+    .content-left {
+      grid-column: contentleft;
+      position: relative;
+
+      @media screen and (max-width: 768px) {
+        grid-column: content;
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-column: bleed;
+      }
+    }
+
+    .content-right {
+      grid-column: contentright;
+      position: relative;
+
+      @media screen and (max-width: 768px) {
+        grid-column: content;
+      }
+
+      @media screen and (max-width: 576px) {
+        grid-column: bleed;
+      }
+    }
+
+    .left {
+      grid-column: left;
+      position: relative;
+
+      &.sm-full {
+        @media screen and (max-width: 768px) {
+          grid-column: full;
+        }
+      }
+    }
+
+    .right {
+      grid-column: right;
+      position: relative;
+
+      &.sm-full {
+        @media screen and (max-width: 768px) {
+          grid-column: full;
+        }
+      }
+    }
+
+    .bleed-left {
+      grid-column: bleedleft;
+      position: relative;
+    }
+
+    .bleed-right {
+      grid-column: bleedright;
+      position: relative;
+    }
+
+    .container {
+      max-width: 100%;
+      grid-column: content;
+      position: relative;
+    }
+}

@@ -1,5 +1,49 @@
 ---
 layout: base.njk
-title: Hello World
+title: Willkommen
+
+eleventyNavigation:
+  key: Start
+  order: 1
 ---
 
+<div class="hero grid">
+  <div class="bleed-right">
+    <div class="hero__bg" style="background-image: url('/assets/img/header.jpg')"></div>
+  </div>
+  <div class="content-left">
+    <div class="hero__content flow">
+      <h1 class="h2">Kreis­hand­werker­schaft: Kompe­tenz im Hand­werk</h1>
+      <p class="lead-sm">
+        Das Handwerk verbindet Menschen und soll verlässlicher Dienstleister für Privatpersonen, Unternehmen und die Region
+        sein.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% include 'components/shortcuts.njk' %}
+
+<section class="pk-5 grid">
+ <div class="content-left flow">
+  <h2>Die Kreishandwerkerschaft Marburg heißt Sie willkommen</h2>
+  <p>Hier finden Sie aktuelle Informationen, den Handwerksbetrieb in Ihrer Nähe, nützliche Adresse und weitere interessante
+  Hinweise rum um das Handwerk in der Region Marburg-Biedenkopf.</p>
+ </div>
+ <div class="content-right">
+    <div class="link-track">
+      <a href="#" class="track track-1">
+        <img src="/assets/img/track-1.jpg" alt="Track 1">
+        <span>Ansprechpartner</span>
+      </a>
+      <a href="#" class="track track-2">
+        <img src="/assets/img/track-2.jpg" alt="Track 2">
+        <span>Kontakt</span>
+      </a>
+      <a href="#" class="track track-3">
+        <img src="/assets/img/track-3.jpg" alt="Track 3">
+        <span>Hilfe</span>
+      </a>
+    </div>
+ </div>
+</section>

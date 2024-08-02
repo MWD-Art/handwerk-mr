@@ -1,0 +1,116 @@
+@use '../foundation/' as *;
+
+section, .section {
+  border-radius: .5rem;
+  position: relative;
+}
+
+.box-shadow {
+  @include boxshadow($primary, .25);
+}
+
+.bg-white {
+  background-color: var(--white);
+}
+
+.bg-primary {
+  background-color: var(--primary);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: $white;
+  }
+
+  p {
+    color: $light;
+  }
+
+  hr {
+    --borderColor: var(--white);
+  }
+
+  .link-list {
+    li {
+      color: var(--white);
+
+      &::before {
+        --triangleColor: var(--secondary);
+      }
+    }
+  }
+}
+
+.bg-secondary {
+  background-color: var(--secondary);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: $white;
+  }
+
+  p,
+  li {
+    color: $light;
+  }
+
+  .link-list a {
+    color: var(--secondary);
+    background-color: var(--white);
+
+    &:hover {
+      background-color: darken($secondary, 5%);
+      color: $white;
+    }
+  }
+
+  .link-list li::before {
+    --triangleColor: var(--white);
+  }
+}
+
+.bg-light {
+  background-color: var(--light);
+}
+
+.bg-blue {
+  background-color: var(--blue);
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h2,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    color: $white;
+  }
+
+  p {
+    color: $light;
+  }
+}

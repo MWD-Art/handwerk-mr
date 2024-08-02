@@ -1,0 +1,6 @@
+@use '../foundation/' as *;
+
+aside {
+  background-color: white;
+  border-left: 1px solid $accent;
+}

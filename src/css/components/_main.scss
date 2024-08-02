@@ -1,0 +1,66 @@
+@use '../foundation/' as *;
+
+.sitewrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: auto 1fr auto;
+  width: calc(100% - 2rem);
+  height: auto;
+  min-height: calc(100dvh - 2rem);
+  background-color: white;
+  margin-block: 1rem;
+  margin-inline: auto;
+  container: wrapper / inline-size;
+  grid-template-areas: 
+    "header header header"
+    "main main main"
+    "footer footer footer";
+
+    &.sidebar {
+      grid-template-areas:
+          "header header header"
+          "main main aside"
+          "footer footer footer";
+    }
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+aside {
+  grid-area: aside;
+}
+
+footer {
+  grid-area: footer;
+}
+
+@container body (max-width: 1199px) {
+  .sitewrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+
+      &.sidebar {
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-areas:
+          "header"
+          "aside"
+          "main"
+          "footer";
+      }
+  }
+
+  aside {
+    border-left: none;
+    border-bottom: 1px solid $accent;
+  }
+}

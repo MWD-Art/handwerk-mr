@@ -1,0 +1,119 @@
+@use './variables' as *;
+@use './mixins' as *;
+@use 'typography' as *;
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--text-base);
+  line-height: 1.4;
+  color: var(--dark);
+  background-color: white;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  container: body / inline-size;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--primary);
+}
+
+h1, .h1 {
+  font-size: var(--h1);
+}
+
+h2, .h2 {
+  font-size: var(--h2);
+}
+
+h3, .h3 {
+  font-size: var(--h3);
+}
+
+h4, .h4 {
+  font-size: var(--h4);
+}
+
+h5, .h5 {
+  font-size: var(--h5);
+}
+
+h6, .h6 {
+  font-size: var(--h6);
+}
+
+.lead {
+  font-size: var(--text-lg);
+}
+
+.lead-xl {
+  font-size: var(--text-xl);
+}
+
+.lead-xxl {
+  font-size: var(--text-xxl);
+}
+
+.lead-xxxl {
+  font-size: var(--text-xxxl);
+}
+
+.lead-sm {
+  font-size: var(--text-md);
+}
+
+.lead-xs {
+  font-size: var(--text-sm);
+}
+
+a:not(.btn):not(.nav-link):not(.logo):not(.card) {
+  color: $primary;
+  @include scheme($secondary, $blue-gradient);
+  background-size: 0 0.1em, 100% 0.1em;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+  position: relative;
+  display: inline;
+  transition: all 0.3s ease;
+
+  &:hover {
+    color: $primary;
+    background-size: 100% 0.1em, 0 0.1em;
+  }
+}
+
+.btn, button {
+  @include btn($white, $primary);
+
+  &.btn-primary {
+    @include btn($white, $primary);
+  }
+
+  &.btn-secondary {
+    @include btn($white, $secondary);
+  }
+
+  &.btn-blue {
+    @include btn($white, $blue);
+  }
+}
+
+.flow > * + * {
+  margin-top: var(--flow-space, 1em);
+}
+
+hr {
+  @include scheme($white, $blue-gradient);
+}
+
+img {
+  filter: brightness(120%) contrast(90%) saturate(150%) sepia(15%);
+}
+
+::selection {
+  color: white;
+  background: $secondary;
+}

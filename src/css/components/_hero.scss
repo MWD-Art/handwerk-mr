@@ -1,0 +1,51 @@
+@use '../foundation/' as *;
+
+.hero {
+  height: auto;
+  max-height: 60dvh;
+  overflow: hidden;
+  border-radius: 0 0 1rem 1rem;
+
+  > * {
+    grid-row: 1 / 2;
+  }
+
+  .content-left {
+    align-items: center;
+    display: flex;
+  }
+
+  &__content {
+    align-self: center;
+    background-color: rgba(255, 255, 255, .3);
+    padding: 1rem 1.5rem;
+    backdrop-filter: blur(1rem);
+    margin-block: auto;
+    border-top: 1px solid rgba(255, 255, 255, .65);
+    border-left: 1px solid rgba(255, 255, 255, .65);
+    border-right: 1px solid rgba(255, 255, 255, .55);
+    border-bottom: 1px solid rgba(255, 255, 255, .45);
+    box-shadow: .25rem 1rem 2rem 0 rgba($primary, .1);
+    border-radius: 1rem;
+
+  }
+
+  &__bg {
+    height: 60dvh;
+    width: 100%;
+    background-size: cover;
+    background-position: center 75%;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, white, rgba(255, 255, 255, 0) 40%);
+      z-index: 0;
+    }
+  }
+}

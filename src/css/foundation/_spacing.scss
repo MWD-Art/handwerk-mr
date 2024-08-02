@@ -1,0 +1,114 @@
+// Define the mixin for padding and margin utilities
+@mixin responsive-spacing-utilities {
+  // Loop through steps from 1 to 25
+  @for $i from 1 through 25 {
+    // Loop through directions for padding and margin
+    @each $direction, $dir-abbreviation in (top, t), (right, r), (bottom, b),
+      (left, l), (block, k), (inline, i)
+    {
+      // Generate utility classes for padding
+      .p#{$dir-abbreviation}-#{$i} {
+        @if $direction == top {
+          padding-top: #{$i}rem;
+        } @else if $direction == right {
+          padding-right: #{$i}rem;
+        } @else if $direction == bottom {
+          padding-bottom: #{$i}rem;
+        } @else if $direction == left {
+          padding-left: #{$i}rem;
+        } @else if $direction ==block {
+          padding-block: #{$i}rem;
+        } @else if $direction ==inline {
+          padding-inline: #{$i}rem;
+        }
+      }
+
+      // Generate utility classes for margin
+      .m#{$dir-abbreviation}-#{$i} {
+        @if $direction == top {
+          margin-top: #{$i}rem;
+        } @else if $direction == right {
+          margin-right: #{$i}rem;
+        } @else if $direction == bottom {
+          margin-bottom: #{$i}rem;
+        } @else if $direction == left {
+          margin-left: #{$i}rem;
+        } @else if $direction == block {
+          margin-block: #{$i}rem;
+        } @else if $direction == inline {
+          margin-inline: #{$i}rem;
+        }
+      }
+    }
+  }
+}
+
+@mixin responsive-spacing-utilities-negative {
+
+  // Loop through steps from 1 to 25
+  @for $i from 1 through 25 {
+
+    // Loop through directions for padding and margin
+    @each $direction, $dir-abbreviation in (top, t), (right, r), (bottom, b),
+    (left, l), (block, k), (inline, i) {
+
+      // Generate utility classes for negative margin
+      .m#{$dir-abbreviation}-#{$i}-neg {
+        @if $direction ==top {
+          margin-top: -#{$i}rem;
+        }
+
+        @else if $direction ==right {
+          margin-right: -#{$i}rem;
+        }
+
+        @else if $direction ==bottom {
+          margin-bottom: -#{$i}rem;
+        }
+
+        @else if $direction ==left {
+          margin-left: -#{$i}rem;
+        }
+
+        @else if $direction ==block {
+          margin-block: -#{$i}rem;
+        }
+
+        @else if $direction ==inline {
+          margin-inline: -#{$i}rem;
+        }
+      }
+    }
+  }
+}
+
+// Include the mixin to generate utility classes
+@include responsive-spacing-utilities;
+
+@mixin media-query($breakpoint) {
+  @if $breakpoint == xs {
+    @media (max-width: 575.98px) {
+      @content;
+    }
+  } @else if $breakpoint == sm {
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $breakpoint == hover {
+    @media (hover: hover) {
+      @content;
+    }
+  }
+}

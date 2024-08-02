@@ -20,6 +20,7 @@
 		{% endblock %}
 
 		{% block aside %}
+			{% include './components/aside.njk' %}
 		{% endblock %}
 
 		{% block footer %}
@@ -27,7 +28,6 @@
 		{% endblock %}
 	</div>
 
-	<script src="https://cdn.jsdelivr.net/npm/container-query-polyfill@1/dist/container-query-polyfill.modern.js"></script>
 	<script src="{{ '/js/index.js' | url }}"></script>
 </body>
 </html>
