@@ -1,0 +1,34 @@
+[
+  {
+    "name": "IKK classic",
+    "img": "/assets/img/ikk.webp"
+  },
+  {
+    "name": "eon",
+    "img": "/assets/img/eon.webp"
+  },
+  {
+    "name": "AOK Hessen",
+    "img": "/assets/img/aok.webp"
+  },
+  {
+    "name": "Stadtwerke Marburg",
+    "img": "/assets/img/sw-marburg.webp"
+  },
+  {
+    "name": "Mewa SE & Co. Vertrieb OHG",
+    "img": "/assets/img/mewa.webp"
+  },
+  {
+    "name": "Signal Iduna",
+    "img": "/assets/img/signal-iduna.webp"
+  },
+  {
+    "name": "BBZ Berufsbildungszentrum Marburg gGmbH",
+    "img": "/assets/img/bbz.webp"
+  },
+  {
+    "name": "Handwerkskammer Kassel",
+    "img": "/assets/img/handwerkskammer-kassel.webp"
+  }
+]

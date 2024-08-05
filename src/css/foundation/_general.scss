@@ -68,7 +68,7 @@ h6, .h6 {
   font-size: var(--text-sm);
 }
 
-a:not(.btn):not(.nav-link):not(.logo):not(.card) {
+a:not(.btn):not(.nav-link):not(.logo):not(.card):not(.track) {
   color: $primary;
   @include scheme($secondary, $blue-gradient);
   background-size: 0 0.1em, 100% 0.1em;

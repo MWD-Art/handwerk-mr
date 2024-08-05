@@ -8,6 +8,18 @@ import { TextPlugin } from "gsap/TextPlugin";
 
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin, TextPlugin);
 
+const lenis = new Lenis();
+
+lenis.on('scroll', (e) => { });
+
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+gsap.ticker.lagSmoothing(0);
+
 // SHORTCUT CARDS START
 const cardwrappers = document.querySelectorAll('.cards');
 const cards = document.querySelectorAll('.card');

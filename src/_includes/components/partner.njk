@@ -1,0 +1,14 @@
+<section class="bg-accent pk-5" id="partner">
+  <div class="grid">
+    <div class="content mb-2">
+      <h2>Partner des Handwerks</h2>
+    </div>
+    <div class="bleed">
+      <div class="partner gap-1">
+        {% for item in partner %}
+        <img src="{{ item.img }}" alt="{{ item.name }}">
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>

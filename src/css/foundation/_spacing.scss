@@ -82,6 +82,18 @@
   }
 }
 
+// GAP
+
+@mixin generate-gap-classes() {
+  @for $i from 1 through 25 {
+    .gap-#{$i} {
+      gap: #{$i}rem;
+    }
+  }
+}
+
+@include generate-gap-classes();
+
 // Include the mixin to generate utility classes
 @include responsive-spacing-utilities;
 

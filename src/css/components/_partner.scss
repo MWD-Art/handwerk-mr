@@ -1,0 +1,27 @@
+@use '../foundation/' as *;
+
+#partner {
+  container: partner / inline-size;
+}
+
+.partner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  img {
+    border-radius: .5rem;
+    @include boxshadow($primary, .3);
+  }
+}
+
+@container partner (width > 512px) {
+  .partner {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@container partner (width > 1400px) {
+  .partner {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
