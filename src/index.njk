@@ -28,7 +28,7 @@ eleventyNavigation:
  <div class="content-left flow">
   <h2>Die Kreishandwerkerschaft Marburg heißt Sie willkommen</h2>
   <p>Hier finden Sie aktuelle Informationen, den Handwerksbetrieb in Ihrer Nähe, nützliche Adresse und weitere interessante
-  Hinweise rum um das Handwerk in der Region Marburg-Biedenkopf.</p>
+  Hinweise rund um das Handwerk in der Region Marburg-Biedenkopf.</p>
   <hr>
   <a href="#" class="btn">mehr über uns</a>
  </div>
@@ -47,27 +47,13 @@ eleventyNavigation:
  </div>
 </section>
 
-<div class="section pk-5">
-  <div class="grid">
-    <div class="content">
-      <div class="boxes">
-        <div class="box bg-light pi-2 pk-2 box-shadow">
-          <h5>Landkreis Marburg - Biedenkopf</h5>
-          <h3>Die Kreishandwerkerschaft</h3>
-        </div>
+{% include 'components/events.njk' %}
 
-        <div class="box bg-primary pi-2 pk-2 box-shadow">
-          <h6>Leistungsspektrum</h6>
-          <h4>Beratung & Service</h4>
-        </div>
-
-        <div class="box bg-secondary pi-2 pk-2 box-shadow">
-          <h6>Über 500 Betriebe</h6>
-          <h4>Innungsfachbetrieben</h4>
-        </div>
-      </div>
-    </div>
+<section class="bg-light pk-5 grid mk-2">
+  <div class="content" id="newscontainer">
+    <h2 class="mb-2">Aktuelles</h2>
+    {% include 'components/news.njk' %}
   </div>
-</div>
+</section>
 
 {% include 'components/partner.njk' %}
