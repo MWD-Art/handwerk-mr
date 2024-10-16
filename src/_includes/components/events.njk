@@ -6,11 +6,10 @@
     <ul class="events">
       {% for event in collections.events | limit(3) %}
       <li>
-        <a href="{{ event.url }}" class="flow">
           <h4>{{ event.data.date | postDate }}</h4>
           <h3>{{ event.data.title }}</h3>
           <p>{{ event.content | safe | excerpt }}</p>
-        </a>
+          <a href="{{ event.url }}">mehr erfahren</a>
       </li>
       {% endfor %}
     </ul>

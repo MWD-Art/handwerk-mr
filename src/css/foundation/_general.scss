@@ -68,20 +68,14 @@ h6, .h6 {
   font-size: var(--text-sm);
 }
 
-a:not(.btn):not(.nav-link):not(.logo):not(.card):not(.track):not(.events li a) {
+a:not(.btn):not(.nav-link):not(.logo):not(.card):not(.track):not(.events li a):not(.news_img) {
   color: $primary;
-  @include scheme($secondary, $blue-gradient);
-  background-size: 0 0.1em, 100% 0.1em;
-  background-position: 100% 100%, 0 100%;
-  background-repeat: no-repeat;
   display: inline-block;
   position: relative;
-  display: inline;
   transition: all 0.3s ease;
 
   &:hover {
-    color: $primary;
-    background-size: 100% 0.1em, 0 0.1em;
+    color: $secondary;
   }
 }
 

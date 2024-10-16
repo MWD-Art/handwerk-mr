@@ -8,16 +8,19 @@ eleventyNavigation:
 ---
 
 <div class="hero grid">
-  <div class="bleed-right">
-    <div class="hero__bg" style="background-image: url('/assets/img/header.jpg')"></div>
+  <div class="full">
+    <div class="hero__bg" style="--bgimg: '/assets/img/hero.webp';"></div>
   </div>
-  <div class="content-left">
-    <div class="hero__content flow">
-      <h1 class="h2">Kreis­hand­werker­schaft: Kompe­tenz im Hand­werk</h1>
-      <p class="lead-sm">
-        Das Handwerk verbindet Menschen und soll verlässlicher Dienstleister für Privatpersonen, Unternehmen und die Region
-        sein.
-      </p>
+  <div class="bleed">
+    <div class="hero__content">
+      <div class="hero__content__lead flow">
+        <div class="h3 mb-0">Kompe­tenz im Hand­werk</div>
+        <h1 class="h2 mt-0">Kreis­hand­werker­schaft Marburg</h1>
+        <p class="lead-sm">
+          Das Handwerk verbindet Menschen und soll verlässlicher Dienstleister für Privatpersonen, Unternehmen und die Region
+          sein.
+        </p>
+      </div>
     </div>
   </div>
 </div>
@@ -49,7 +52,7 @@ eleventyNavigation:
 
 {% include 'components/events.njk' %}
 
-<section class="bg-light pk-5 grid mk-2">
+<section class="pk-5 grid mk-2">
   <div class="content" id="newscontainer">
     <h2 class="mb-2">Aktuelles</h2>
     {% include 'components/news.njk' %}

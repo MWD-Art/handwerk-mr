@@ -1,0 +1,65 @@
+// Define variables for grid configuration
+$grid-columns: 12;
+$grid-gutter: 32px;
+
+// Calculate column width without gutter
+$column-width: calc((100% - #{$grid-gutter} * (#{$grid-columns} - 1)) / #{$grid-columns});
+
+// Define grid container style
+.columns {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
+  gap: $grid-gutter;
+}
+
+// Define utility classes for grid columns
+@for $i from 1 through $grid-columns {
+  .col-#{$i} {
+    grid-column: span $i;
+  }
+}
+
+// Define utility classes for offsetting columns
+@for $i from 1 through $grid-columns {
+  .offset-#{$i} {
+    margin-left: calc((#{$i} / #{$grid-columns}) * ($column-width + $grid-gutter));
+  }
+}
+
+// Define responsive classes for common breakpoints
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+);
+
+@each $breakpoint, $value in $breakpoints {
+  @media (min-width: $value) {
+    .columns {
+      grid-template-columns: repeat($grid-columns, minmax(0, 1fr));
+    }
+
+    @for $i from 1 through $grid-columns {
+      .col-#{$breakpoint}-#{$i} {
+        grid-column: span $i;
+      }
+
+      .offset-#{$breakpoint}-#{$i} {
+        margin-left: calc((#{$i} / #{$grid-columns}) * ($column-width + $grid-gutter));
+      }
+    }
+  }
+}
+
+// Example usage of grid, column, and offset classes
+.row {
+  @extend .columns;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+}

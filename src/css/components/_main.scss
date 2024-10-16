@@ -4,14 +4,14 @@
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-rows: auto 1fr auto;
-  width: calc(100% - 2rem);
+  padding-inline: clamp(1rem, 5vw, 3rem);
   height: auto;
   min-height: calc(100dvh - 2rem);
   background-color: white;
   margin-block: 1rem;
   margin-inline: auto;
   container: wrapper / inline-size;
-  grid-template-areas: 
+  grid-template-areas:
     "header header header"
     "main main main"
     "footer footer footer";
@@ -44,12 +44,14 @@ footer {
   .sitewrapper {
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr auto;
+    padding: 0;
     grid-template-areas:
       "header"
       "main"
       "footer";
 
       &.sidebar {
+        grid-template-columns: 1fr;
         grid-template-rows: auto auto 1fr auto;
         grid-template-areas:
           "header"

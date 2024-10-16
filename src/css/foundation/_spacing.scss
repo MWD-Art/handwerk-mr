@@ -1,7 +1,7 @@
 // Define the mixin for padding and margin utilities
 @mixin responsive-spacing-utilities {
   // Loop through steps from 1 to 25
-  @for $i from 1 through 25 {
+  @for $i from 0 through 25 {
     // Loop through directions for padding and margin
     @each $direction, $dir-abbreviation in (top, t), (right, r), (bottom, b),
       (left, l), (block, k), (inline, i)
